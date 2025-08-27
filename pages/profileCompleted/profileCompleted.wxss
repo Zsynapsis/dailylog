@@ -1,0 +1,34 @@
+.container {
+  padding: 30rpx;
+}
+.header .title {
+  font-size: 32rpx;
+  font-weight: bold;
+  margin-bottom: 20rpx;
+}
+.plan-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12rpx;
+}
+.plan-box {
+  background: #fff;
+  border-radius: 8rpx;
+  padding: 16rpx;
+  box-shadow: 0 1rpx 3rpx rgba(0,0,0,0.1);
+}
+.plan-time {
+  font-size: 24rpx;
+  color: #888;
+}
+.plan-title {
+  font-size: 28rpx;
+  font-weight: bold;
+  margin-left: 8rpx;
+  color: #333;
+}
+.empty {
+  text-align: center;
+  margin-top: 100rpx;
+  color: #aaa;
+}

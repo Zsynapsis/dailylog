@@ -1,0 +1,121 @@
+.container {
+  background-color: #f5f5f5;
+  min-height: 100vh;
+  padding: 0 20rpx; /* 让容器左右有适当的间距 */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* 保证顶部元素不动 */
+  align-items: center; /* 水平居中 */
+}
+
+/* 顶部栏 */
+.header {
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+  margin-bottom: 20rpx;
+  justify-content: flex-start; /* 改成顶部对齐 */
+  padding-top: 15vh; /* 相对屏幕高度，往下偏移一点，比如 15% */
+}
+
+.date {
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #333;
+}
+
+.add-btn {
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 16rpx;
+  font-size: 26rpx;
+  padding: 8rpx 20rpx;
+  line-height: 36rpx;
+}
+
+/* 计划列表 */
+.plan-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8rpx; /* 用 gap 控制卡片间距 */
+  padding: 0 10rpx; /* 增加左右边距，让卡片不直接贴边 */
+  /* 关键：控制卡片的整体位置 */
+  justify-content: flex-start; /* 改成顶部对齐 */
+  padding-top: 15vh; /* 相对屏幕高度，往下偏移一点，比如 15% */
+  flex: 1; /* 使计划卡片区域占满剩余空间 */
+}
+
+/* 卡片 */
+.plan-box {
+  display: flex;
+  align-items: center;
+  background: white;
+  border-radius: 8rpx;   /* 圆角 */
+  padding: 12rpx 16rpx; /* 内边距 */
+  margin-bottom: 8rpx;  /* 卡片之间的间距 */
+  box-shadow: 0 1rpx 3rpx rgba(0,0,0,0.05); /* 阴影 */
+}
+
+.plan-time {
+  font-size: 26rpx;
+  font-weight: bold;
+  color: #555;
+  width: 90rpx;
+}
+
+.plan-title {
+  flex: 1;
+  font-size: 26rpx;
+  color: #333;
+  margin-left: 8rpx;
+}
+
+.plan-actions {
+  display: flex;
+  gap: 6rpx; /* 按钮之间的间距 */
+}
+
+/* 完成按钮 */
+.btn-finish,
+.btn-delay {
+  border-radius: 20rpx;
+  font-size: 24rpx;
+  padding: 2rpx 12rpx; /* 按钮更小巧 */
+  min-width: 80rpx;
+}
+
+/* 完成按钮样式 */
+.btn-finish {
+  background: #e0f2e9;
+  color: #4CAF50;
+}
+.btn-finish.active {
+  background: #4CAF50;
+  color: white;
+}
+
+/* 拖延按钮样式 */
+.btn-delay {
+  background: #fff3e0;
+  color: #FF9800;
+}
+.btn-delay.active {
+  background: #FF9800;
+  color: white;
+}
+
+.btn-finish.done,
+.btn-delay.delay {
+  background: #ddd;
+  color: #999;
+  border: none;
+}
+
+
+/* 空状态 */
+.empty {
+  text-align: center;
+  margin-top: 150rpx;
+  color: #aaa;
+  font-size: 28rpx;
+}

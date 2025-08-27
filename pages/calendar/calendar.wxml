@@ -1,0 +1,6 @@
+<view class="container">
+  <calendar
+    binddayClick="onDayClick"
+    markDays="{{markDays}}"
+  />
+</view>

@@ -1,0 +1,16 @@
+/* .container {
+  padding: 40rpx;
+}
+.form-item {
+  margin-bottom: 40rpx;
+}
+input {
+  border: 1px solid #ccc;
+  padding: 10rpx;
+  width: 80%;
+} */
+
+.container { padding: 30rpx; }
+input { border: 1rpx solid #ddd; padding: 10rpx; margin-bottom: 20rpx; }
+.picker { padding: 20rpx; border: 1rpx solid #ddd; margin-bottom: 20rpx; }
+button { background: #4CAF50; color: #fff; padding: 20rpx; border-radius: 8rpx; }

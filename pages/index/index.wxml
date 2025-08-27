@@ -1,0 +1,46 @@
+<view class="container">
+  <!-- 顶部 -->
+  <view class="header">
+    <text class="date">{{today}}</text>
+    <button class="add-btn" bindtap="goAddPlan">＋ 新建计划</button>
+    <!-- 日历按钮 -->
+    <button class="calendar-btn" size="mini" bindtap="goCalendar">📅</button>
+  </view>
+
+  <!-- 计划列表 -->
+  <block wx:if="{{plans.length > 0}}">
+    <view class="plan-list">
+      <block wx:for="{{plans}}" wx:key="id">
+        <view class="plan-box">
+          <text class="plan-time">{{item.time}}</text>
+          <text class="plan-title {{item.status}}">{{item.title}}</text>
+          <view class="plan-actions">
+              <button 
+                class="btn-finish {{item.status}}"
+                size="mini"
+                bindtap="setDone"
+                data-id="{{item.id}}">
+                {{item.status=='done'?'已完成':'完成'}}
+              </button>
+              <button 
+                class="btn-delay {{item.status}}"
+                size="mini"
+                bindtap="setDelay"
+                data-id="{{item.id}}">
+                {{item.status=='delay'?'已拖延':'拖延'}}
+              </button>
+            </view>
+        </view>
+      </block>
+    </view>
+  </block>
+
+  <!-- 空状态 -->
+  <block wx:else>
+    <view class="empty">
+      <text>今日暂无计划，快去添加吧！</text>
+    </view>
+  </block>
+
+
+</view>

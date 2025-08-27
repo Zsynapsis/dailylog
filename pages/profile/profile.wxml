@@ -1,0 +1,10 @@
+<view class="container">
+  <view class="header">
+    <text class="title">个人中心</text>
+  </view>
+
+  <view class="menu">
+    <button bindtap="goSettings">信息设置</button>
+    <button bindtap="goCompleted">完成计划</button>
+  </view>
+</view>

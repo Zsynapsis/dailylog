@@ -1,0 +1,22 @@
+<view class="container">
+  <view class="form-item">
+    <text>计划标题：</text>
+    <input placeholder="请输入学习计划" bindinput="onTitleInput"/>
+  </view>
+
+  <view class="form-item">
+    <text>选择日期：</text>
+    <picker mode="date" value="{{date}}" bindchange="onDateChange">
+      <view>{{date}}</view>
+    </picker>
+  </view>
+  
+  <view class="form-item">
+  <text>选择时间：</text>
+  <picker mode="time" value="{{time}}" bindchange="onTimeChange">
+    <view>{{time}}</view>
+  </picker>
+</view>
+
+  <button type="primary" bindtap="savePlan">保存</button>
+</view>

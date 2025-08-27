@@ -1,0 +1,21 @@
+<view class="container">
+  <view class="header">
+    <text class="title">已完成计划</text>
+  </view>
+
+  <block wx:if="{{finishedPlans.length > 0}}">
+    <view class="plan-list">
+      <block wx:for="{{finishedPlans}}" wx:key="id">
+        <view class="plan-box">
+          <text class="plan-time">{{item.time}}</text>
+          <text class="plan-title">{{item.title}}</text>
+        </view>
+      </block>
+    </view>
+  </block>
+  <block wx:else>
+    <view class="empty">
+      <text>暂无已完成计划</text>
+    </view>
+  </block>
+</view>
