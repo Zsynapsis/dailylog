@@ -1,16 +1,99 @@
-/* .container {
-  padding: 40rpx;
+/* 页面整体 */
+.container {
+  padding: 30rpx;
+  background: #f2f4f7;   /* 更柔和的灰蓝背景 */
+  min-height: 100vh;
+  box-sizing: border-box;
 }
-.form-item {
-  margin-bottom: 40rpx;
-}
-input {
-  border: 1px solid #ccc;
-  padding: 10rpx;
-  width: 80%;
-} */
 
-.container { padding: 30rpx; }
-input { border: 1rpx solid #ddd; padding: 10rpx; margin-bottom: 20rpx; }
-.picker { padding: 20rpx; border: 1rpx solid #ddd; margin-bottom: 20rpx; }
-button { background: #4CAF50; color: #fff; padding: 20rpx; border-radius: 8rpx; }
+/* 表单卡片 */
+.form-card {
+  width: 90%;               /* 占屏幕宽度的 92% */
+  margin: 0 auto 40rpx;     /* 自动居中 */
+  background: #fff;
+  border-radius: 20rpx;
+  padding: 40rpx 30rpx;
+  box-shadow: 0 8rpx 20rpx rgba(0, 0, 0, 0.08);
+}
+
+/* 每个表单项 */
+.form-item {
+  margin-bottom: 32rpx; /* 卡片里间距更均匀 */
+}
+
+/* 标签文字 */
+.form-item text {
+  font-size: 28rpx;
+  color: #555;
+  font-weight: 500;
+  display: block;
+  margin-bottom: 12rpx;
+  letter-spacing: 1rpx;
+}
+
+/* 输入框 & 选择器统一风格 */
+input,
+.picker {
+  border: 1rpx solid #ddd;
+  padding: 26rpx 22rpx;
+  border-radius: 12rpx;
+  width: 100%;
+  font-size: 30rpx;
+  background: #fafafa;
+  box-shadow: inset 0 2rpx 6rpx rgba(0, 0, 0, 0.05);
+  transition: border 0.3s, box-shadow 0.3s;
+}
+
+/* 聚焦效果 */
+input:focus,
+.picker:active {
+  border: 1rpx solid #4CAF50;
+  box-shadow: 0 6rpx 18rpx rgba(76, 175, 80, 0.25);
+  outline: none;
+  background: #fff;
+}
+
+/* placeholder 美化 */
+input::placeholder {
+  color: #aaa;
+  font-size: 26rpx;
+  font-style: italic;
+}
+
+/* 保存按钮 */
+button {
+  width: 100%;
+  padding: 28rpx 0;
+  font-size: 32rpx;
+  font-weight: bold;
+  border-radius: 16rpx;
+  background: linear-gradient(135deg, #4CAF50, #66BB6A);
+  color: #fff;
+  box-shadow: 0 6rpx 20rpx rgba(76, 175, 80, 0.4);
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+/* 点击缩放 */
+button:active {
+  transform: scale(0.96);
+}
+
+/* 流光效果 */
+button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: skewX(-20deg);
+}
+
+button:hover::after,
+button:active::after {
+  left: 120%;
+  transition: left 0.6s;
+}
